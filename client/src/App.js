@@ -7,6 +7,7 @@ import Main from './pages/Main/Main';
 import Sidebar from './pages/Sidebar/Sidebar.jsx';
 
 import './App.css';
+import User from './pages/User/User.jsx';
 
 function App() {
   const themeMode = useSelector((state) => state.theme.value.darkMode)
@@ -15,9 +16,12 @@ function App() {
       <GlobalStyle />
       <div className="App">
           <Sidebar />
-          <Routes>
-            <Route path='/' element={ Main } />
-          </Routes>  
+          <div className='Main'>
+            <Routes>
+              <Route path='/' element={ Main } />
+            </Routes>  
+          </div>
+          <User />
       </div>
     </ThemeProvider>
   );
